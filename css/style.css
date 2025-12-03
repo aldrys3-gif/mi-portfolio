@@ -47,28 +47,70 @@ body {
     color: #4aa8ff;
 }
 
-/* ===== HEADER ===== */
+/* ===== HEADER / HERO ===== */
 header {
-    text-align: center;
     padding: 60px 20px;
     background: linear-gradient(135deg, #1c1f26, #111317);
+    border-bottom: 1px solid #22272e;
 }
 
-header h1 {
-    font-size: 42px;
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.hero-photo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4aa8ff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.hero-text h1 {
+    font-size: 36px;
     margin: 0;
     color: #ffffff;
 }
 
-header h2 {
-    margin-top: 10px;
+.hero-text h2 {
+    margin-top: 8px;
     font-weight: 300;
     color: #9fa6b2;
 }
 
-header p {
-    margin-top: 15px;
+.hero-text p {
+    margin-top: 12px;
     color: #4aa8ff;
+}
+
+.hero-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.hero-links a {
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #1a2938;
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #304256;
+    transition: background 0.15s, border-color 0.15s;
+}
+
+.hero-links a:hover {
+    background: #4aa8ff;
+    border-color: #4aa8ff;
+    color: #000;
 }
 
 /* ===== SECTIONS ===== */
@@ -78,144 +120,4 @@ section {
     padding: 25px;
     background: #1a1c22;
     border-radius: 12px;
-    border: 1px solid #2a2e35;
-    box-shadow: 0 0 20px rgba(0,0,0,0.25);
-}
-
-h3 {
-    font-size: 24px;
-    border-left: 4px solid #4aa8ff;
-    padding-left: 10px;
-}
-
-/* ===== CARDS ===== */
-.card {
-    background: #15171c;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #2b2e35;
-    margin-bottom: 15px;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 0 15px rgba(74,168,255,0.2);
-}
-
-/* Small cards for achievements */
-.card-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-    gap: 15px;
-}
-
-.card.small {
-    text-align: center;
-}
-
-/* ===== SKILL ICON CARDS ===== */
-.icon-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
-    gap: 20px;
-}
-
-.icon-card {
-    background: #15171c;
-    padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    font-weight: bold;
-    border: 1px solid #2b2e35;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.icon-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(74,168,255,0.2);
-}
-
-.icon-card span {
-    display: block;
-    font-size: 32px;
-    margin-bottom: 10px;
-    color: #4aa8ff;
-}
-
-/* ===== DOWNLOAD BUTTON ===== */
-.cv-button a {
-    display: inline-block;
-    padding: 10px 18px;
-    background: #4aa8ff;
-    color: #000;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.cv-button a:hover {
-    background: #6cbaff;
-}
-
-/* ===== CONTACT ===== */
-.contact a {
-    color: #4aa8ff;
-    text-decoration: none;
-}
-
-.contact a:hover {
-    text-decoration: underline;
-}
-
-/* ===== FOOTER ===== */
-footer {
-    text-align: center;
-    padding: 20px;
-    margin-top: 40px;
-    color: #6c717b;
-}
-
-/* ===== BACK TO TOP BUTTON ===== */
-#backToTop {
-    position: fixed;
-    bottom: 25px;
-    right: 25px;
-    background: #4aa8ff;
-    color: #000;
-    padding: 10px 15px;
-    border-radius: 50%;
-    font-size: 20px;
-    text-decoration: none;
-    display: none;
-}
-
-#backToTop:hover {
-    background: #6cbaff;
-}
-
-/* Show when scrolling */
-body.scrolled #backToTop {
-    display: block;
-}
-
-/* ===== ANIMATIONS ===== */
-.fade {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.7s forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-    section {
-        padding: 20px;
-    }
-}
+    border:
