@@ -12,7 +12,7 @@
     <!-- ===== NAVBAR ===== -->
     <nav class="navbar">
         <ul>
-            <li><a href="#about">About me</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#achievements">Achievements</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -29,7 +29,7 @@
     </header>
 
     <!-- ===== ABOUT ===== -->
-    <section class="about" id="about">
+    <section id="about" class="fade">
         <h3>About Me</h3>
         <p>
             Systems Administrator with over 7 years of experience managing, maintaining, and optimizing IT infrastructures.
@@ -43,83 +43,129 @@
     </section>
 
     <!-- ===== EXPERIENCE ===== -->
-    <section class="experience" id="experience">
+    <section id="experience" class="fade">
         <h3>Professional Experience</h3>
 
-        <div class="job">
+        <div class="card">
             <h4>Systems Administrator – CMR Fruits (2023 – Present)</h4>
             <ul>
                 <li>Administration of Azure, Entra, Intune, and Microsoft Defender.</li>
-                <li>Management of users and devices via Active Directory.</li>
-                <li>Administration of 150+ virtual machines and physical servers.</li>
-                <li>Office 365 management, migrations, Teams, SharePoint.</li>
-                <li>Automation using PowerShell scripts.</li>
-                <li>Vendor coordination and network monitoring.</li>
+                <li>Active Directory management and automation scripting.</li>
+                <li>Administration of 150+ virtual and physical servers.</li>
+                <li>Office 365 management, migrations, and collaboration tools.</li>
+                <li>Monitoring, SSL management and vendor coordination.</li>
             </ul>
         </div>
 
-        <div class="job">
+        <div class="card">
             <h4>Systems Technician – Aramark Spain (2020 – 2022)</h4>
             <ul>
-                <li>SCCM, Active Directory, SharePoint, Teams and internal web servers.</li>
-                <li>Backup management and antivirus configuration.</li>
+                <li>SCCM, Active Directory, SharePoint, Teams administration.</li>
+                <li>Backup and antivirus server management.</li>
             </ul>
         </div>
 
-        <div class="job">
+        <div class="card">
             <h4>Technical Support Analyst – Aramark Spain (2019 – 2020)</h4>
             <ul>
-                <li>Remote/on-site support, hardware repair, VPN and device setup.</li>
-                <li>Network deployment, ticket management, system admin basics.</li>
+                <li>Remote/on-site support and hardware repair.</li>
+                <li>VPN setup, network deployment, and system troubleshooting.</li>
             </ul>
         </div>
     </section>
 
     <!-- ===== ACHIEVEMENTS ===== -->
-    <section class="achievements" id="achievements">
+    <section id="achievements" class="fade">
         <h3>Achievements</h3>
-        <ul>
-            <li>Reduced critical vulnerabilities by 40% through security policies and patching.</li>
-            <li>Migrated 1.2 TB of data to SharePoint/OneDrive with 99% data integrity.</li>
-            <li>Decreased incident resolution time by 30% by optimizing support tools.</li>
-            <li>Trained 50+ users, increasing Microsoft 365 adoption by 70%.</li>
-        </ul>
+
+        <div class="card-list">
+            <div class="card small">
+                <h4>40% Fewer Vulnerabilities</h4>
+                <p>Through security policies and patch management.</p>
+            </div>
+            <div class="card small">
+                <h4>1.2 TB Migration</h4>
+                <p>SharePoint & OneDrive with 99% data integrity.</p>
+            </div>
+            <div class="card small">
+                <h4>30% Faster Resolution</h4>
+                <p>Process optimization and support automation.</p>
+            </div>
+            <div class="card small">
+                <h4>50+ Users Trained</h4>
+                <p>Improved Microsoft 365 adoption by 70%.</p>
+            </div>
+        </div>
     </section>
 
     <!-- ===== PROJECTS ===== -->
-    <section class="projects" id="projects">
+    <section id="projects" class="fade">
         <h3>Key Projects</h3>
-        <ul>
-            <li>SharePoint/OneDrive migration – 1.2 TB in 3 months.</li>
-            <li>Security policy implementation – 40% fewer vulnerabilities.</li>
-            <li>Active Directory Domain Deployment – 300 users.</li>
-            <li>Zimbra mail server for 300 users.</li>
-        </ul>
+
+        <div class="card">
+            <ul>
+                <li>SharePoint/OneDrive migration – 1.2 TB in 3 months.</li>
+                <li>Security policy implementation – 40% fewer vulnerabilities.</li>
+                <li>Active Directory Domain Deployment – 300 users.</li>
+                <li>Zimbra mail server deployment – 300 users.</li>
+            </ul>
+        </div>
     </section>
 
     <!-- ===== SKILLS ===== -->
-    <section class="skills" id="skills">
+    <section id="skills" class="fade">
         <h3>Technical Skills</h3>
-        <p><strong>Cloud:</strong> Azure, AWS, GCP</p>
-        <p><strong>Systems:</strong> Windows Server, Linux, MacOS</p>
-        <p><strong>Virtualization:</strong> VMware vSphere, Hyper-V</p>
-        <p><strong>Security:</strong> Defender, Fortinet, Kaspersky</p>
-        <p><strong>Automation:</strong> PowerShell, HTML5</p>
-        <p><strong>Backup & Monitoring:</strong> Veeam, PRTG, Nagios, Splunk</p>
+
+        <div class="icon-grid">
+
+            <div class="icon-card">
+                <span>☁️</span>
+                <p>Azure / AWS / GCP</p>
+            </div>
+
+            <div class="icon-card">
+                <span>📦</span>
+                <p>VMware / Hyper-V</p>
+            </div>
+
+            <div class="icon-card">
+                <span>🐧</span>
+                <p>Linux / Windows Server</p>
+            </div>
+
+            <div class="icon-card">
+                <span>🛡️</span>
+                <p>Defender / Fortinet / Kaspersky</p>
+            </div>
+
+            <div class="icon-card">
+                <span>⚙️</span>
+                <p>PowerShell Automation</p>
+            </div>
+
+            <div class="icon-card">
+                <span>📊</span>
+                <p>PRTG / Nagios / Splunk</p>
+            </div>
+
+        </div>
     </section>
 
     <!-- ===== CONTACT ===== -->
-    <section class="contact" id="contact">
+    <section id="contact" class="fade">
         <h3>Contact</h3>
         <p>Email: <a href="mailto:aleonardogarciar@gmail.com">aleonardogarciar@gmail.com</a></p>
-        <p>LinkedIn: (pásame el enlace para añadirlo)</p>
         <p>GitHub: <a href="https://github.com/aldrys3-gif" target="_blank">github.com/aldrys3-gif</a></p>
+        <p>LinkedIn: (pendiente de añadir)</p>
     </section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
         <p>© 2025 Leonardo García — Systems Administrator</p>
     </footer>
+
+    <!-- ===== BACK TO TOP ===== -->
+    <a href="#" id="backToTop">↑</a>
 
 </body>
 </html>
