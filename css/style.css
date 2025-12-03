@@ -1,376 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leonardo García – Systems Administrator</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
+/* ===== GLOBAL ===== */
+html {
+    scroll-behavior: smooth;
+}
 
-<body data-lang="es">
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #0f1115;
+    color: #e6e6e6;
+    line-height: 1.6;
+    padding-top: 60px;
+}
 
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar">
-        <div class="nav-inner">
-            <ul>
-                <li><a href="#about">
-                    <span class="lang-es">Sobre mí</span>
-                    <span class="lang-en">About</span>
-                </a></li>
-                <li><a href="#experience">
-                    <span class="lang-es">Experiencia</span>
-                    <span class="lang-en">Experience</span>
-                </a></li>
-                <li><a href="#achievements">
-                    <span class="lang-es">Logros</span>
-                    <span class="lang-en">Achievements</span>
-                </a></li>
-                <li><a href="#projects">
-                    <span class="lang-es">Proyectos</span>
-                    <span class="lang-en">Projects</span>
-                </a></li>
-                <li><a href="#skills">
-                    <span class="lang-es">Skills</span>
-                    <span class="lang-en">Skills</span>
-                </a></li>
-                <li><a href="#contact">
-                    <span class="lang-es">Contacto</span>
-                    <span class="lang-en">Contact</span>
-                </a></li>
-            </ul>
+/* Control idiomas */
+.lang-es, .lang-en {
+    display: none;
+}
+.lang-es-block, .lang-en-block {
+    display: none;
+}
 
-            <div class="lang-switch">
-                <button type="button" data-lang="es" aria-label="Español">🇪🇸</button>
-                <button type="button" data-lang="en" aria-label="English">🇺🇸</button>
-            </div>
-        </div>
-    </nav>
+body[data-lang="es"] .lang-es,
+body[data-lang="es"] .lang-es-block {
+    display: inline;
+}
+body[data-lang="es"] .lang-en,
+body[data-lang="es"] .lang-en-block {
+    display: none;
+}
 
-    <!-- ===== HEADER / HERO ===== -->
-    <header>
-        <div class="hero">
-            <div class="hero-photo">
-                <!-- Asegúrate de subir img/profile.jpg al repo -->
-                <img src="img/profile.jpg" alt="Portrait of Leonardo García">
-            </div>
-            <div class="hero-text">
-                <h1>Leonardo García</h1>
-                <h2>
-                    <span class="lang-es">Administrador de Sistemas</span>
-                    <span class="lang-en">Systems Administrator</span>
-                </h2>
-                <p>
-                    Azure · VMware · Proxmox · Linux · Automation · Security · Monitoring
-                </p>
-                <div class="hero-links">
-                    <a href="mailto:aleonardogarciar@gmail.com">
-                        <span class="lang-es">Email</span>
-                        <span class="lang-en">Email</span>
-                    </a>
-                    <a href="https://www.linkedin.com/in/leonardo-garcia-199a83196/" target="_blank">
-                        LinkedIn
-                    </a>
-                    <a href="https://github.com/aldrys3-gif" target="_blank">
-                        GitHub
-                    </a>
-                </div>
-            </div>
-        </div>
-    </header>
+body[data-lang="en"] .lang-en,
+body[data-lang="en"] .lang-en-block {
+    display: inline;
+}
+body[data-lang="en"] .lang-es,
+body[data-lang="en"] .lang-es-block {
+    display: none;
+}
 
-    <!-- ===== ABOUT ===== -->
-    <section id="about" class="fade">
-        <h3>
-            <span class="lang-es">Sobre mí</span>
-            <span class="lang-en">About Me</span>
-        </h3>
+/* En bloques, que no queden en inline */
+.lang-es-block, .lang-en-block {
+    display: block;
+}
 
-        <div class="lang-es-block">
-            <p>
-                Administrador de sistemas con más de 5 años de experiencia gestionando, manteniendo y
-                optimizando infraestructuras IT híbridas (on-premise y cloud). Especializado en Azure,
-                virtualización (VMware y Proxmox), automatización con PowerShell y herramientas de
-                monitorización como Prometheus y Grafana. Acostumbrado a trabajar con entornos
-                críticos, mejorar la seguridad y reducir incidencias mediante estandarización y
-                automatización de procesos.
-            </p>
-        </div>
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #131519;
+    border-bottom: 1px solid #22272e;
+    z-index: 1000;
+    padding: 8px 0;
+}
 
-        <div class="lang-en-block">
-            <p>
-                Systems Administrator with over 5 years of experience managing, maintaining and optimizing
-                hybrid IT infrastructures (on-prem and cloud). Specialized in Azure, virtualization
-                (VMware and Proxmox), automation with PowerShell, and monitoring tools such as Prometheus
-                and Grafana. Used to working in critical environments, improving security and reducing
-                incidents through standardization and automation of processes.
-            </p>
-        </div>
+.nav-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 15px;
+}
 
-        <div class="cv-button">
-            <a href="CV/Leonardo_Garcia_CV.pdf" download>
-                <span class="lang-es">Descargar CV</span>
-                <span class="lang-en">Download CV</span>
-            </a>
-        </div>
-    </section>
+.navbar ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
-    <!-- ===== EXPERIENCE ===== -->
-    <section id="experience" class="fade">
-        <h3>
-            <span class="lang-es">Experiencia profesional</span>
-            <span class="lang-en">Professional Experience</span>
-        </h3>
+.navbar li {
+    margin: 0 10px;
+}
 
-        <div class="lang-es-block">
-            <div class="card">
-                <h4>Administrador de Sistemas – CMR FRUITS (2023 – Actualidad)</h4>
-                <ul>
-                    <li>Administración de Azure, Entra ID, Intune y Microsoft Defender para usuarios y dispositivos corporativos.</li>
-                    <li>Gestión de identidades, grupos y políticas de seguridad en Active Directory (on-prem / híbrido).</li>
-                    <li>Administración de más de 150 máquinas virtuales y servidores físicos (Windows Server y Linux).</li>
-                    <li>Gestión de Microsoft 365: Exchange Online, Teams, SharePoint, licencias y migraciones.</li>
-                    <li>Automatización de tareas recurrentes con PowerShell (despliegues, hardening, reporting y inventario).</li>
-                    <li>Configuración y supervisión de copias de seguridad, certificados SSL, VPNs y firewalls.</li>
-                    <li>Coordinación con proveedores y soporte de segundo/tercer nivel en incidencias críticas.</li>
-                </ul>
-            </div>
+.navbar a {
+    color: #9fa6b2;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s;
+}
 
-            <div class="card">
-                <h4>Técnico de Sistemas – Aramark Spain (2020 – 2022)</h4>
-                <ul>
-                    <li>Administración de SCCM para despliegue de software, inventario y actualizaciones de equipos.</li>
-                    <li>Gestión de Active Directory, listas de distribución, buzones compartidos y permisos.</li>
-                    <li>Administración básica de servidores web internos y soluciones antivirus corporativas.</li>
-                    <li>Gestión de copias de seguridad y soporte a usuarios de negocio en herramientas Microsoft 365.</li>
-                </ul>
-            </div>
+.navbar a:hover {
+    color: #4aa8ff;
+}
 
-            <div class="card">
-                <h4>Analista de Soporte Técnico – Aramark Spain (2019 – 2020)</h4>
-                <ul>
-                    <li>Soporte remoto y on-site a usuarios: hardware, sistemas operativos Windows y Linux.</li>
-                    <li>Instalación y configuración de VPN, puntos de red y equipos de comunicaciones.</li>
-                    <li>Gestión de tickets, resolución de incidencias de primer y segundo nivel.</li>
-                </ul>
-            </div>
-        </div>
+/* Botones de idioma */
+.lang-switch button {
+    background: #1a1c22;
+    border: 1px solid #2a2e35;
+    border-radius: 20px;
+    padding: 4px 8px;
+    cursor: pointer;
+    margin-left: 6px;
+    font-size: 16px;
+}
 
-        <div class="lang-en-block">
-            <div class="card">
-                <h4>Systems Administrator – CMR FRUITS (2023 – Present)</h4>
-                <ul>
-                    <li>Administration of Azure, Entra ID, Intune and Microsoft Defender for corporate users and devices.</li>
-                    <li>Identity, group and security policy management in Active Directory (on-prem / hybrid).</li>
-                    <li>Administration of 150+ virtual machines and physical servers (Windows Server and Linux).</li>
-                    <li>Microsoft 365 administration: Exchange Online, Teams, SharePoint, licenses and migrations.</li>
-                    <li>Automation of recurring tasks using PowerShell (deployments, hardening, reporting and inventory).</li>
-                    <li>Configuration and monitoring of backups, SSL certificates, VPNs and firewalls.</li>
-                    <li>Direct coordination with vendors and 2nd/3rd level support for critical incidents.</li>
-                </ul>
-            </div>
+.lang-switch button:hover {
+    border-color: #4aa8ff;
+}
 
-            <div class="card">
-                <h4>Systems Technician – Aramark Spain (2020 – 2022)</h4>
-                <ul>
-                    <li>SCCM administration for software deployment, inventory and patching.</li>
-                    <li>Active Directory management, distribution lists, shared mailboxes and permissions.</li>
-                    <li>Basic administration of internal web servers and corporate antivirus platforms.</li>
-                    <li>Backup management and user support on Microsoft 365 tools.</li>
-                </ul>
-            </div>
+/* ===== HEADER / HERO ===== */
+header {
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #1c1f26, #111317);
+    border-bottom: 1px solid #22272e;
+}
 
-            <div class="card">
-                <h4>Technical Support Analyst – Aramark Spain (2019 – 2020)</h4>
-                <ul>
-                    <li>Remote and on-site user support for hardware and Windows/Linux operating systems.</li>
-                    <li>VPN configuration, network cabling and deployment of communication equipment.</li>
-                    <li>Ticket management and resolution of 1st and 2nd level incidents.</li>
-                </ul>
-            </div>
-        </div>
-    </section>
+.hero {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
 
-    <!-- ===== ACHIEVEMENTS ===== -->
-    <section id="achievements" class="fade">
-        <h3>
-            <span class="lang-es">Logros</span>
-            <span class="lang-en">Achievements</span>
-        </h3>
+.hero-photo img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #4aa8ff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    background-color: #0f1115;
+}
 
-        <div class="card-list lang-es-block">
-            <div class="card small">
-                <h4>−40% vulnerabilidades críticas</h4>
-                <p>Mediante políticas de seguridad, control de parches y hardening.</p>
-            </div>
-            <div class="card small">
-                <h4>1,2 TB migrados</h4>
-                <p>Migración a SharePoint y OneDrive con un 99% de integridad de datos.</p>
-            </div>
-            <div class="card small">
-                <h4>−30% tiempo de resolución</h4>
-                <p>Optimización de procesos de soporte y herramientas de ticketing.</p>
-            </div>
-            <div class="card small">
-                <h4>+70% adopción M365</h4>
-                <p>Formación a más de 50 usuarios en Teams, SharePoint y OneDrive.</p>
-            </div>
-        </div>
+.hero-text h1 {
+    font-size: 36px;
+    margin: 0;
+    color: #ffffff;
+}
 
-        <div class="card-list lang-en-block">
-            <div class="card small">
-                <h4>40% fewer critical vulnerabilities</h4>
-                <p>Through security policies, patch management and hardening.</p>
-            </div>
-            <div class="card small">
-                <h4>1.2 TB migrated</h4>
-                <p>SharePoint and OneDrive migration with 99% data integrity.</p>
-            </div>
-            <div class="card small">
-                <h4>30% faster resolution</h4>
-                <p>Optimization of support processes and ticketing tools.</p>
-            </div>
-            <div class="card small">
-                <h4>70% increase in M365 adoption</h4>
-                <p>Training delivered to 50+ users on Teams, SharePoint and OneDrive.</p>
-            </div>
-        </div>
-    </section>
+.hero-text h2 {
+    margin-top: 8px;
+    font-weight: 300;
+    color: #9fa6b2;
+}
 
-    <!-- ===== PROJECTS ===== -->
-    <section id="projects" class="fade">
-        <h3>
-            <span class="lang-es">Proyectos clave</span>
-            <span class="lang-en">Key Projects</span>
-        </h3>
+.hero-text p {
+    margin-top: 12px;
+    color: #4aa8ff;
+}
 
-        <div class="card lang-es-block">
-            <ul>
-                <li>Migración de 1,2 TB de datos corporativos a SharePoint y OneDrive en menos de 3 meses.</li>
-                <li>Implantación de políticas de seguridad y parcheo centralizado, reduciendo un 40% las vulnerabilidades críticas.</li>
-                <li>Implementación de dominio de Active Directory para 300 usuarios (FASMIJ).</li>
-                <li>Despliegue de servidor de correo Zimbra para 300 usuarios (FASMIJ).</li>
-                <li>Homelab basado en Proxmox con VMs Linux/Windows, monitorización con Prometheus + Grafana y automatizaciones con n8n.</li>
-            </ul>
-        </div>
+.hero-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
 
-        <div class="card lang-en-block">
-            <ul>
-                <li>Migration of 1.2 TB of corporate data to SharePoint and OneDrive in under 3 months.</li>
-                <li>Security policy implementation and centralized patching, reducing critical vulnerabilities by 40%.</li>
-                <li>Active Directory domain deployment for 300 users (FASMIJ).</li>
-                <li>Zimbra mail server deployment for 300 users (FASMIJ).</li>
-                <li>Personal homelab based on Proxmox with Linux/Windows VMs, monitoring stack (Prometheus + Grafana) and automation workflows using n8n.</li>
-            </ul>
-        </div>
-    </section>
+.hero-links a {
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #1a2938;
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 14px;
+    border: 1px solid #304256;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
 
-    <!-- ===== SKILLS ===== -->
-    <section id="skills" class="fade">
-        <h3>Skills</h3>
+.hero-links a:hover {
+    background: #4aa8ff;
+    border-color: #4aa8ff;
+    color: #000;
+}
 
-        <div class="icon-grid lang-es-block">
-            <div class="icon-card">
-                <span>☁️</span>
-                <p>Azure · AWS · GCP</p>
-            </div>
-            <div class="icon-card">
-                <span>📦</span>
-                <p>VMware vSphere · Proxmox · Hyper-V</p>
-            </div>
-            <div class="icon-card">
-                <span>🐧</span>
-                <p>Windows Server · Linux (Ubuntu, Debian) · macOS</p>
-            </div>
-            <div class="icon-card">
-                <span>🛡️</span>
-                <p>Microsoft Defender · Fortinet · Kaspersky</p>
-            </div>
-            <div class="icon-card">
-                <span>⚙️</span>
-                <p>PowerShell · Automatización · n8n</p>
-            </div>
-            <div class="icon-card">
-                <span>📊</span>
-                <p>Prometheus · Grafana · PRTG · Nagios · Splunk</p>
-            </div>
-        </div>
+/* ===== SECTIONS ===== */
+section {
+    max-width: 900px;
+    margin: 25px auto;
+    padding: 25px;
+    background: #1a1c22;
+    border-radius: 12px;
+    border: 1px solid #2a2e35;
+    box-shadow: 0 0 20px rgba(0,0,0,0.25);
+}
 
-        <div class="icon-grid lang-en-block">
-            <div class="icon-card">
-                <span>☁️</span>
-                <p>Azure · AWS · GCP</p>
-            </div>
-            <div class="icon-card">
-                <span>📦</span>
-                <p>VMware vSphere · Proxmox · Hyper-V</p>
-            </div>
-            <div class="icon-card">
-                <span>🐧</span>
-                <p>Windows Server · Linux (Ubuntu, Debian) · macOS</p>
-            </div>
-            <div class="icon-card">
-                <span>🛡️</span>
-                <p>Microsoft Defender · Fortinet · Kaspersky</p>
-            </div>
-            <div class="icon-card">
-                <span>⚙️</span>
-                <p>PowerShell · Automation · n8n</p>
-            </div>
-            <div class="icon-card">
-                <span>📊</span>
-                <p>Prometheus · Grafana · PRTG · Nagios · Splunk</p>
-            </div>
-        </div>
-    </section>
+h3 {
+    font-size: 24px;
+    border-left: 4px solid #4aa8ff;
+    padding-left: 10px;
+    margin-top: 0;
+}
 
-    <!-- ===== CONTACT ===== -->
-    <section id="contact" class="fade">
-        <h3>
-            <span class="lang-es">Contacto</span>
-            <span class="lang-en">Contact</span>
-        </h3>
-
-        <div class="lang-es-block">
-            <p>Email: <a href="mailto:aleonardogarciar@gmail.com">aleonardogarciar@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/aldrys3-gif" target="_blank">github.com/aldrys3-gif</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/leonardo-garcia-199a83196/" target="_blank">leonardo-garcia-199a83196</a></p>
-        </div>
-
-        <div class="lang-en-block">
-            <p>Email: <a href="mailto:aleonardogarciar@gmail.com">aleonardogarciar@gmail.com</a></p>
-            <p>GitHub: <a href="https://github.com/aldrys3-gif" target="_blank">github.com/aldrys3-gif</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/leonardo-garcia-199a83196/" target="_blank">leonardo-garcia-199a83196</a></p>
-        </div>
-    </section>
-
-    <!-- ===== FOOTER ===== -->
-    <footer>
-        <p>© 2025 Leonardo García — Systems Administrator</p>
-    </footer>
-
-    <!-- ===== BACK TO TOP BUTTON ===== -->
-    <a href="#" id="backToTop">↑</a>
-
-    <!-- ===== JS: idioma + back-to-top ===== -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const langButtons = document.querySelectorAll('.lang-switch button');
-            langButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    const lang = btn.dataset.lang;
-                    document.body.setAttribute('data-lang', lang);
-                });
-            });
-
-            document.addEventListener('scroll', function () {
-                if (window.scrollY > 200) {
-                    document.body.classList.add('scrolled');
-                } else {
-                    document.body.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
-
-</body>
-</html>
+/* ===== CARDS ===== */
+.card {
+    background: #15171c;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #2b2e35;
+    margin-bottom: 15px;
+    transition: transform 0.15s ease, box-shadow
