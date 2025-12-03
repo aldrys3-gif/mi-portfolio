@@ -101,4 +101,43 @@ ul li {
         padding: 20px;
         margin: 15px;
     }
+/* ===== NAVBAR ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #131519;
+    border-bottom: 1px solid #22272e;
+    z-index: 1000;
+    padding: 10px 0;
 }
+
+.navbar ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #9fa6b2;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.navbar a:hover {
+    color: #4aa8ff;
+}
+
+/* Compensación para que el contenido no quede debajo del navbar */
+body {
+    padding-top: 60px;
+}
+
