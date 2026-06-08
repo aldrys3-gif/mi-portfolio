@@ -28,6 +28,9 @@ body[data-lang="es"] .lang-es,
 body[data-lang="es"] .lang-es-block {
     display: inline;
 }
+body[data-lang="es"] .lang-es-block {
+    display: block;
+}
 body[data-lang="es"] .lang-en,
 body[data-lang="es"] .lang-en-block {
     display: none;
@@ -37,16 +40,15 @@ body[data-lang="en"] .lang-en,
 body[data-lang="en"] .lang-en-block {
     display: inline;
 }
+body[data-lang="en"] .lang-en-block {
+    display: block;
+}
 body[data-lang="en"] .lang-es,
 body[data-lang="en"] .lang-es-block {
     display: none;
 }
 
-/* Bloques */
-.lang-es-block,
-.lang-en-block {
-    display: block;
-}
+/* Bloques - no override aquí, se controla solo con body[data-lang] */
 
 /* NAVBAR */
 .navbar {
@@ -179,6 +181,17 @@ h3 {
 
 .card.small h4 {
     margin-bottom: 8px;
+}
+
+.card ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.card li {
+    margin-bottom: 8px;
+    color: #d3d7df;
 }
 
 /* SKILLS GRID */
