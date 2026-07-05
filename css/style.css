@@ -119,6 +119,27 @@ header {
     text-align: center;
 }
 
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.hero-photo {
+    width: 260px;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid #1a2540;
+    box-shadow: 0 0 20px rgba(0,0,0,0.35);
+    flex-shrink: 0;
+}
+
 .hero-text h1 {
     font-size: 36px;
     margin: 0;
